@@ -1,0 +1,91 @@
+:root{
+    --blanco: #fff;
+    --negro: #111111;
+    --gris: #343a40;
+
+    --primario: #0089a4;
+
+    --fuentePrincipal: 'Raleway', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+    background-color: rgb(239, 239, 239);
+}
+
+h1{
+    font-weight: 900;
+    margin: 1rem 0 2rem 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.tarjeta {
+  width: 32rem;
+  border: 1px solid #c6c6c6;
+  overflow: hidden;
+  display: grid;
+
+  /* Definimos las áreas */
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "img"
+    "content"
+    "btn";
+}
+
+.tarjeta__img {
+  grid-area: img;
+  width: 100%;
+  display: block;
+}
+
+.tarjeta__content {
+  grid-area: content;
+  padding: 1.2rem;
+}
+
+p{
+    line-height: 1.5;
+}
+
+.published {
+  margin-top: 3rem;
+  color: #555;
+  font-size: 1.2rem;
+  text-align: right;
+}
+
+span{
+    color: #65b052;
+}
+
+.tarjeta__btn {
+  grid-area: btn;
+  background: #65b052;
+  color: white;
+  padding: 1rem;
+  margin: 1rem;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
