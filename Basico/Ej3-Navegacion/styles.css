@@ -1,0 +1,80 @@
+/*
+    Estoy usando Mobile-First
+    Los media queries son para Desktop
+*/
+
+:root{
+    --blanco: #fff;
+    --negro: #111111;
+    --gris: #343a40;
+
+    --primario: #0089a4;
+
+    --fuentePrincipal: 'Raleway', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.6rem;
+}
+
+h1{
+    font-weight: 900;
+    margin: 1rem 0 2rem 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+.contenedor{
+    margin: 0 auto;
+    width: 80%;
+}
+
+.navegacion{
+    background-color: var(--primario);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.link{
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+}
+
+.link:hover{
+    background-color: #007086;
+}
+
+@media (min-width: 768px){
+    .link{
+        text-align: unset;
+    }
+
+    .activities, .blog{
+        text-align: center;
+    }
+
+    .aboutMe{
+        text-align: end;
+    }
+
+    .navegacion{
+        flex-direction: row;
+    }
+
+}
